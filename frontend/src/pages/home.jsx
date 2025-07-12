@@ -1,10 +1,10 @@
-import RestoreIcon from '@mui/icons-material/Restore';
-import { Button, IconButton, TextField } from '@mui/material';
-import { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
+import withAuth from '../utils/withAuth'
+import { useNavigate } from 'react-router-dom'
 import "../App.css";
+import { Button, IconButton, TextField } from '@mui/material';
+import RestoreIcon from '@mui/icons-material/Restore';
 import { AuthContext } from '../contexts/AuthContext';
-import withAuth from '../utils/withAuth';
 
 function HomeComponent() {
 

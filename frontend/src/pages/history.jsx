@@ -1,10 +1,13 @@
-import HomeIcon from '@mui/icons-material/Home';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import Typography from '@mui/material/Typography';
-import { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react'
+import { AuthContext } from '../contexts/AuthContext'
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../contexts/AuthContext';
+import Card from '@mui/material/Card';
+import Box from '@mui/material/Box';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import HomeIcon from '@mui/icons-material/Home';
 
 import { IconButton } from '@mui/material';
 export default function History() {

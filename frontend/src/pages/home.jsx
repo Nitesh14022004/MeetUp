@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'
-import withAuth from '../utils/withAuth'
-import { useNavigate } from 'react-router-dom'
-import "../App.css";
-import { Button, IconButton, TextField } from '@mui/material';
 import RestoreIcon from '@mui/icons-material/Restore';
+import { Button, IconButton, TextField } from '@mui/material';
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "../App.css";
 import { AuthContext } from '../contexts/AuthContext';
+import withAuth from '../utils/withAuth';
 
 function HomeComponent() {
 
@@ -26,7 +26,7 @@ function HomeComponent() {
 
                 <div style={{ display: "flex", alignItems: "center" }}>
 
-                    <h2>Apna Video Call</h2>
+                    <h2>MeetUp</h2>
                 </div>
 
                 <div style={{ display: "flex", alignItems: "center" }}>

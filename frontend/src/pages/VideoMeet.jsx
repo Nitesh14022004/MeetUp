@@ -1,17 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react'
-import io from "socket.io-client";
-import { Badge, IconButton, TextField } from '@mui/material';
-import { Button } from '@mui/material';
-import VideocamIcon from '@mui/icons-material/Videocam';
-import VideocamOffIcon from '@mui/icons-material/VideocamOff'
-import styles from "../styles/videoComponent.module.css";
-import CallEndIcon from '@mui/icons-material/CallEnd'
-import MicIcon from '@mui/icons-material/Mic'
-import MicOffIcon from '@mui/icons-material/MicOff'
+import CallEndIcon from '@mui/icons-material/CallEnd';
+import ChatIcon from '@mui/icons-material/Chat';
+import MicIcon from '@mui/icons-material/Mic';
+import MicOffIcon from '@mui/icons-material/MicOff';
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
-import StopScreenShareIcon from '@mui/icons-material/StopScreenShare'
-import ChatIcon from '@mui/icons-material/Chat'
+import StopScreenShareIcon from '@mui/icons-material/StopScreenShare';
+import VideocamIcon from '@mui/icons-material/Videocam';
+import VideocamOffIcon from '@mui/icons-material/VideocamOff';
+import { Badge, Button, IconButton, TextField } from '@mui/material';
+import { useEffect, useRef, useState } from 'react';
+import io from "socket.io-client";
 import server from '../environment';
+import styles from "../styles/videoComponent.module.css";
+import LiveSpeechToText from "../utils/LiveSpeechToText";
+
 
 const server_url = server;
 
@@ -524,6 +525,7 @@ export default function VideoMeetComponent() {
 
 
                     <video className={styles.meetUserVideo} ref={localVideoref} autoPlay muted></video>
+                            <LiveSpeechToText />
 
                     <div className={styles.conferenceView}>
                         {videos.map((video) => (
